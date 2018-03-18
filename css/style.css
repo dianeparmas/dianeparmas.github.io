@@ -193,7 +193,7 @@ input, textarea, select, button {
 	border-bottom: 2px solid #ffe756;
 	padding-top: 30px;
 }
-.choices-wrap section {
+.choices-wrapper {
 	border-top: 2px solid #ffe756;
 	border-bottom: 2px solid #ffe756;
 	padding-bottom: 20px;
@@ -272,7 +272,9 @@ input, textarea, select, button {
 	float: right;
 	font-family: 'PT Sans Narrow', sans-serif;
 	color: #3f2916;
-	font-sise: 24pt;
+	font-size: 24pt;
+	margin-top: -40px;
+	font-weight: regular;
 }
 .tabs-title {
 	cursor: pointer;
@@ -418,10 +420,61 @@ footer {
 	margin: 0;
 }
 /* ------------------- muud stiilid ----------------------- */
-
-
-@media all and (max-width: 767px) {
-	
+@media all and (max-width:950px) {
+	.container {
+		width: 100%;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	#header {
+		height: 500px;
+		background-position: top 0px center;
+	}
+	#header-inner {
+		left: 30px;
+		bottom: 70px;
+	}
+}
+@media all and (max-width:780px) {
+	.modal-content {
+		width: 90%;
+		overflow-y: scroll;
+	}
+	.modal-body p {
+		font-size: 14px;
+	}
+	h1 {
+		font-size: 26pt;
+	}
+}
+@media all and (max-width:767px) {
+	.checkedCounterDiv {
+		font-size: 20pt;
+	}
+	.about.row-eq-height {
+		display: block;
+	}
+	.text-side {
+		float: left;
+		width: 100%;
+	}
+	.img-side {
+		padding-bottom: 30%;
+		width:60%;
+		margin: 0 auto;
+		clear: both;
+	}
+}
+@media all and (max-width: 600px) {
+	.choices {
+		height: 200px;
+	}
+	.choice-text {
+		padding-top: 5px;
+	}
+	.choice-text p {
+		font-size: 14px;
+	}
 }
 /* ------------------- clearfix ----------------------- */
 .clearfix:before,
@@ -432,9 +485,10 @@ footer {
 .clearfix:after {
     clear:both;
 }
+/*
 .clearfix {
     *zoom:1;
-}
+}*/
 .clear {
 	clear:both;
 	width:100%;

@@ -18,17 +18,17 @@ jQuery(document).ready(function() {
 	});		
 	$("#submitBtn").attr("disabled", "disabled");
 	$("#submitBtn").addClass('disabled-btn');			
-	if ( $(".choices-wrap section").css('display') === ('block') ) {
-		$(".choices-wrap section").css('borderBottom', 'none');
+	if ( $(".choices-wrapper").css('display') === ('block') ) {
+		$(".choices-wrapper").css('borderBottom', 'none');
 	}
 	$(".tabs-title").click(function() {
 	   $(this).toggleClass('active');
-	   var checkElement = $(this).next();
-		if ((checkElement.is('section')) && (checkElement.is(':visible'))) {
+	   var checkElement = $(this).next().next();
+		if ((checkElement.is('.choices-wrapper')) && (checkElement.is(':visible'))) {
 			return false;
 		}
-		if ((checkElement.is('section')) && (!checkElement.is(':visible'))) {
-			$('.choices-wrap section:visible').not(checkElement.parent()).slideUp('normal');					
+		if ((checkElement.is('.choices-wrapper')) && (!checkElement.is(':visible'))) {
+			$('.choices-wrapper:visible').not(checkElement.parent()).slideUp('normal');					
 			checkElement.slideDown('normal');	
 			$('html, body').animate({
 			  scrollTop: $(".tabs-title").offset().top
@@ -36,9 +36,9 @@ jQuery(document).ready(function() {
 			return false;
 		}					 
 	});				
-	$(".btn").click(function() {
+	/*$(".btn").click(function() {
 		$(this).next().slideToggle();
-	});
+	});*/
 	var tabs1 = $("#tabs-1");
 	var tabs2 = $("#tabs-2");
 	var tabs3 = $("#tabs-3");
@@ -86,12 +86,12 @@ jQuery(document).ready(function() {
 		$(".modal-outer").removeClass('active');
 	});
 	$('.jargmine-btn').on("click", function(){
-		var x = $(this).parentsUntil($('.content')).next().find($('section'));
-		if ((x.is('section')) && (x.is(':visible'))) {
+		var x = $(this).parentsUntil($('.content')).next().find($('.choices-wrapper'));
+		if ((x.is('.choices-wrapper')) && (x.is(':visible'))) {
 			return false;
 		}
-		if ((x.is('section')) && (!x.is(':visible'))) {
-			$('.choices-wrap section:visible').not(x.parent()).slideUp('normal');
+		if ((x.is('.choices-wrapper')) && (!x.is(':visible'))) {
+			$('.choices-wrapper:visible').not(x.parent()).slideUp('normal');
 			x.slideDown('normal');	
 			$('html, body').animate({
 			  scrollTop: $(".tabs-title").offset().top
