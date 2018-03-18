@@ -272,9 +272,7 @@ input, textarea, select, button {
 	float: right;
 	font-family: 'PT Sans Narrow', sans-serif;
 	color: #3f2916;
-	font-size: 24pt;
-	margin-top: -40px;
-	font-weight: regular;
+	font-sise: 24pt;
 }
 .tabs-title {
 	cursor: pointer;
