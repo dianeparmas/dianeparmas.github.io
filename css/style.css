@@ -508,7 +508,6 @@ footer {
 	.choices {
 		height: 200px;
 		width: 100%;
-		float: left;
 	}
 	.choice-text {
 		padding-top: 5px;
@@ -521,6 +520,17 @@ footer {
 	}	
 	#header-inner h2 {
 		font-size: 18px;
+	}
+	.container {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.choice-input {
+		margin-right: 15px;
+	}
+	.choice-text {
+		width: calc(100% - 140px);
+		padding-lefT: 10px;
 	}
 }
 @media all and (max-width:520px) {
@@ -573,6 +583,24 @@ footer {
 	}
 	#tingimus-link, #footer-text {  
 		line-height: 90px;
+	}
+	#valiArtiklid {
+		font-size: 23pt;
+	}
+	#valiTeema {
+		font-size: 18px;
+	}
+}
+@media all and (max-width:330px) {
+	.modal-content {
+		padding: 20px;		
+	}
+	#modal .close {
+		right: -5px;
+		top: -5px;
+	}
+	.modal-header h1 {
+		font-size: 20pt;
 	}
 }
 @media all and (max-width:300px) {
