@@ -26,7 +26,9 @@ body {
 /* ------------------- general styles ----------------------- */ 
 * {
 	position:relative;
-	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 a {
 	text-decoration:none;
@@ -257,7 +259,10 @@ input, textarea, select, button {
 }
 .choice-text {
 	float: left;
+	width:70%;
 	width: calc(100% - 160px);
+	width: -webkit-calc(100% - 160px);
+    width: -moz-calc(100% - 160px);
 	margin: 5px;
 	padding-left: 20px;
 }
@@ -358,6 +363,12 @@ input, textarea, select, button {
 	background-repeat: no-repeat;
 	width: 40%;
 }
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
 .modal-content {	
 	width: 780px;
 	height: 550px;	
@@ -432,6 +443,22 @@ input, textarea, select, button {
 	bottom: 0;
 }
 /* ------------------- muud stiilid ----------------------- */
+/* Internet Explorer 10+, Microsoft Edge Browser */
+_:-ms-lang(x), .footer {
+		position: relative;	  
+		}
+_:-ms-lang(x), .wrap .content {
+		padding-bottom:0 !important;	  
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+    /* Safari and Chrome, if Chrome rule needed */
+    
+
+    /* Safari 5+ ONLY */
+    ::i-block-chrome, .footer {
+		position: relative;
+    }
+}  
 @media all and (max-width:1800px) {
 	#header-inner {
 		margin-top: -50px;
@@ -507,10 +534,13 @@ input, textarea, select, button {
 		right: 30px;
 		margin: 0;
 		width: calc(100% - 60px);
+		width: -webkit-calc(100% - 60px);
+		width: -moz-calc(100% - 60px);
 		height: auto;
 	}
 }
-@media all and (max-width:600px) {
+
+@media all and (max-width:700px) {
 	.choices {
 		height: 200px;
 		width: 100%;
@@ -536,6 +566,8 @@ input, textarea, select, button {
 	}
 	.choice-text {
 		width: calc(100% - 140px);
+		width: -webkit-calc(100% - 140px);
+		width: -moz-calc(100% - 140px);
 		padding-left: 10px;
 	}
 }
@@ -623,6 +655,8 @@ input, textarea, select, button {
 	}	
 	.choice-text {
 		width: calc(100% - 120px);
+		width: -webkit-calc(100% - 120px);
+		width: -moz-calc(100% - 120px);
 	}
 	.choice-text p {
 		line-height: 20px;
@@ -641,6 +675,8 @@ input, textarea, select, button {
 	}
 	.choice-text {
 		width: calc(100% - 60px);
+		width: -webkit-calc(100% - 60px);
+		width: -moz-calc(100% - 60px);
 	}
 	.choice-text p {
 		margin-top: 15px;
@@ -679,13 +715,4 @@ input, textarea, select, button {
 	clear:both;
 	width:100%;
 	display:block;
-}
-/* ---- Row with equal height columns ---- */
-
-
-.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
 }
