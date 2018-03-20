@@ -155,6 +155,7 @@ input, textarea, select, button {
 	max-width: 950px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 50px;
 }	
 #valiArtiklidLink {
 	color: #a62300;
@@ -241,7 +242,6 @@ input, textarea, select, button {
 	border: 3px solid #3f2916;
 	border-top: none;
 	border-right: none;
-
 	transform: rotate(-45deg);
 }
 .choice-input input[type=checkbox]:checked + label:after {
@@ -288,9 +288,6 @@ input, textarea, select, button {
 	font-family: 'BienetresocialBold';
 	font-weight: bold;
 	color: #3f2916;
-}
-.tabs-title.active {
-
 }
 .btn {
 	padding:13px;
@@ -407,12 +404,15 @@ input, textarea, select, button {
 	height:150px;	
 	width: 100%;
 }
+#footer-inner.container {
+	margin-top: 0;
+}
 #tingimus-link, #footer-text {
 	width: 100%;
 	height: 50%;
 	line-height: 75px;
 }
-footer {
+.footer {
 	background-color: #3b3530;
 }
 #footer-inner a {
@@ -424,6 +424,12 @@ footer {
 	color: #FFF;
 	font-size: 16px;
 	margin: 0;
+}
+.footer {
+	position:absolute;
+	left:0;
+	right:0;
+	bottom: 0;
 }
 /* ------------------- muud stiilid ----------------------- */
 @media all and (max-width:1800px) {
@@ -445,7 +451,7 @@ footer {
 		margin-top: -35px;
 	}
 	.img-side {
-		background-position: center bottom -70px;
+		background-position: center bottom -80px;
 	}
 }
 @media all and (max-width:780px) {
@@ -488,7 +494,7 @@ footer {
 		width:70%;
 		margin: 0 auto;
 		clear: both;
-		background-position: center bottom 90%;
+		background-position: center bottom 105%;
 	}
 	.modal-header h1 {
 		font-size: 26pt;
@@ -530,7 +536,7 @@ footer {
 	}
 	.choice-text {
 		width: calc(100% - 140px);
-		padding-lefT: 10px;
+		padding-left: 10px;
 	}
 }
 @media all and (max-width:520px) {
@@ -543,6 +549,16 @@ footer {
 	}
 	#valiArtiklidLink {
 		font-size: 24pt;
+	}
+	.jargmine-btn {
+		font-size: 26px;
+	}
+	.btn {
+		padding: 7px;
+		width: 200px;
+	}
+	#submitBtn {
+		font-size: 26px;
 	}
 }
 @media all and (max-width:440px) {
@@ -578,6 +594,11 @@ footer {
 	.text-side h2 {
 		font-size: 16px;
 	}
+	.img-side {
+		padding-bottom: 55%;
+		width: 90%;
+		background-position: center bottom 130%;
+	}
 	#footer-inner {
 		height:180px;		
 	}
@@ -591,6 +612,22 @@ footer {
 		font-size: 18px;
 	}
 }
+@media all and (max-width:370px) {
+	.choices {
+		height: 270px;
+	}
+	.choice-thumb {
+		width: 60px;
+		height: 60px;
+		margin-top: -30px;
+	}	
+	.choice-text {
+		width: calc(100% - 120px);
+	}
+	.choice-text p {
+		line-height: 20px;
+	}
+}
 @media all and (max-width:330px) {
 	.modal-content {
 		padding: 20px;		
@@ -601,6 +638,23 @@ footer {
 	}
 	.modal-header h1 {
 		font-size: 20pt;
+	}
+	.choice-text {
+		width: calc(100% - 60px);
+	}
+	.choice-text p {
+		margin-top: 15px;
+	}
+	.choice-thumb {
+		width: 50px;
+		height: 50px;
+		margin-top: 0px;
+		position: absolute;
+		top: 15px;
+		right: 0;
+	}
+	.choice-text .strong {
+		padding-right: 55px;
 	}
 }
 @media all and (max-width:300px) {
@@ -625,13 +679,6 @@ footer {
 	clear:both;
 	width:100%;
 	display:block;
-}
-/* ------------------- footer ----------------------- */
-.footer {
-	position:absolute;
-	left:0;
-	right:0;
-	bottom: 0;
 }
 /* ---- Row with equal height columns ---- */
 
