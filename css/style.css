@@ -444,6 +444,9 @@ footer {
 		left: 30px;
 		margin-top: -35px;
 	}
+	.img-side {
+		background-position: center bottom -70px;
+	}
 }
 @media all and (max-width:780px) {
 	.modal-content {
@@ -481,10 +484,24 @@ footer {
 		width: 100%;
 	}
 	.img-side {
-		padding-bottom: 30%;
-		width:60%;
+		padding-bottom: 40%;
+		width:70%;
 		margin: 0 auto;
 		clear: both;
+		background-position: center bottom 90%;
+	}
+	.modal-header h1 {
+		font-size: 26pt;
+	}
+	.modal-content {
+		position: absolute;
+		left: 30px;
+		top: 30px;
+		bottom: 30px;
+		right: 30px;
+		margin: 0;
+		width: calc(100% - 60px);
+		height: auto;
 	}
 }
 @media all and (max-width:600px) {
@@ -544,6 +561,18 @@ footer {
 	}
 	#text-bg {
 		top: -60px;
+	}
+	.choices {
+		height: 250px;
+	}	
+	.text-side h2 {
+		font-size: 16px;
+	}
+	#footer-inner {
+		height:180px;		
+	}
+	#tingimus-link, #footer-text {  
+		line-height: 90px;
 	}
 }
 @media all and (max-width:300px) {
