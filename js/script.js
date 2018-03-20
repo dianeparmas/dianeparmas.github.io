@@ -21,6 +21,7 @@ jQuery(document).ready(function() {
 	if ( $(".choices-wrapper").css('display') === ('block') ) {
 		$(".choices-wrapper").css('borderBottom', 'none');
 	}
+	//Akordioni plokid
 	$(".tabs-title").click(function() {
 	   $(this).toggleClass('active');
 	   var checkElement = $(this).next().next();
@@ -35,10 +36,8 @@ jQuery(document).ready(function() {
 			}, 500);
 			return false;
 		}					 
-	});				
-	/*$(".btn").click(function() {
-		$(this).next().slideToggle();
-	});*/
+	});
+	//Akordioni plokkide checkboxide valikud
 	var tabs1 = $("#tabs-1");
 	var tabs2 = $("#tabs-2");
 	var tabs3 = $("#tabs-3");
@@ -47,19 +46,24 @@ jQuery(document).ready(function() {
 	var n2 = 0;
 	var n3 = 0;
 	var n4 = 0;
-	function printNumber(number, number2) {
+	function checkedInput(amount, id) {
 	   return function(e) {
 			var length1 = tabs1.find($( " input:checked" )).length;
 			var length2 = tabs2.find($( " input:checked" )).length;
 			var length3 = tabs3.find($( " input:checked" )).length;
 			var length4 = tabs4.find($( " input:checked" )).length;    
-			number =  number2.find($( " input:checked" )).length;     
-			$(this).parentsUntil($('.choices-wrap')).prev().find($('span')).html(number + ' / 3');
+			amount =  id.find($( " input:checked" )).length; 
+			$(this).closest($('.choices-wrap')).find($('.checkedCounterDiv span')).html(amount + ' / 3');
 			if ($(this).is(':checked')) {;
 				$(this).parent().parent().css('backgroundColor', '#fffdef');
+				$(this).next().css('backgroundColor', '#fff6bf');
+				$(this).next().css('border', '1px solid #f0ce00');
 			}else {
 				$(this).parent().parent().css('backgroundColor', '#FFF');
-			}                           
+				$(this).next().css('backgroundColor', '#FFF');
+				$(this).next().css('border', '1px solid #ddd');
+			}    
+			//kui igas plokis on vähemalt 1 check'itud, siis muutub nupp aktiivseks
 			if ( length1 > 0 && length2 > 0 && length3 > 0 && length4 > 0) {     
 				$("#submitBtn").removeAttr('disabled');
 				$("#submitBtn").removeClass('disabled-btn');
@@ -70,44 +74,46 @@ jQuery(document).ready(function() {
 			}  
 	   };
 	}			  
-	$("#tabs-1 input[type=checkbox]").click(printNumber(n1, tabs1)); 
-	$("#tabs-2 input[type=checkbox]").click(printNumber(n2, tabs2)); 
-	$("#tabs-3 input[type=checkbox]").click(printNumber(n3, tabs3)); 
-	$("#tabs-4 input[type=checkbox]").click(printNumber(n4, tabs4)); 
-
+	$("#tabs-1 input[type=checkbox]").click(checkedInput(n1, tabs1)); 
+	$("#tabs-2 input[type=checkbox]").click(checkedInput(n2, tabs2)); 
+	$("#tabs-3 input[type=checkbox]").click(checkedInput(n3, tabs3)); 
+	$("#tabs-4 input[type=checkbox]").click(checkedInput(n4, tabs4)); 
+	// Kampaania tingimus popup
 	$('#tingimus').on("click", function() {
 		$(".modal-outer").toggleClass('active');
 		$('html, body').animate({
-			  scrollTop: $(".modal-outer").offset().top
-			}, 500);
+			  scrollTop: $(".modal-outer")
+			});
 			return false;
 	});
 	$('#modal .close').on("click", function(){
 		$(".modal-outer").removeClass('active');
 	});
+	//Järgmine teema nupp avab järgmise akordioni ploki ja sulgeb praeguse
 	$('.jargmine-btn').on("click", function(){
-		var x = $(this).parentsUntil($('.content')).next().find($('.choices-wrapper'));
-		if ((x.is('.choices-wrapper')) && (x.is(':visible'))) {
+		var nextWrapper = $(this).parentsUntil($('.content')).next().find($('.choices-wrapper'));
+		if ((nextWrapper.is('.choices-wrapper')) && (nextWrapper.is(':visible'))) {
 			return false;
 		}
-		if ((x.is('.choices-wrapper')) && (!x.is(':visible'))) {
-			$('.choices-wrapper:visible').not(x.parent()).slideUp('normal');
-			x.slideDown('normal');	
+		if ((nextWrapper.is('.choices-wrapper')) && (!nextWrapper.is(':visible'))) {
+			$('.choices-wrapper:visible').not(nextWrapper.parent()).slideUp('normal');
+			nextWrapper.slideDown('normal');	
 			$('html, body').animate({
 			  scrollTop: $(".tabs-title").offset().top
 			}, 500);
 			return false;
 		}
 	});
+	//Kustutab aadressireal ära ankur-lingi #
 	$(function() {
 	  $('a[href*="#"]:not([href="#"])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 		  var target = $(this.hash);
 		  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 		  if (target.length) {
-			$('html, body').animate({
+			/*$('html, body').animate({
 			  scrollTop: target.offset().top
-			}, 1000);
+			}, 1000);*/
 			return false;
 		  }
 		}
