@@ -65,11 +65,11 @@ jQuery(document).ready(function() {
 			}    
 			//kui igas plokis on vähemalt 1 check'itud, siis muutub nupp aktiivseks
 			if ( length1 > 0 && length2 > 0 && length3 > 0 && length4 > 0) {     
-				$("#submitBtn").removeAttr('disabled');
+				//$("#submitBtn").removeAttr('disabled');
 				$("#submitBtn").removeClass('disabled-btn');
 				$("#submitBtn").addClass('valmis-btn');
 			} else {     
-				$("#submitBtn").attr("disabled", "disabled");
+				//$("#submitBtn").attr("disabled", "disabled");
 				$("#submitBtn").addClass('disabled-btn');
 			}  
 	   };
