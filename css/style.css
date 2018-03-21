@@ -289,7 +289,7 @@ input, textarea, select, button {
 	color: #3f2916;
 	font-size: 24pt;
 	margin-top: -40px;
-	font-weight: regular;
+	font-weight: normal;
 }
 .tabs-title {
 	cursor: pointer;
@@ -328,8 +328,8 @@ input, textarea, select, button {
 	margin-top: 20px;
 }
 .valmis-btn {
-	background-color: #971d00;
-	border: 1px solid #971d00;
+	background-color: #a62300;
+	border: 1px solid #7b1700;
 	border-radius: 7px;
 	font-size: 30px;
 	font-family: 'PT Sans Narrow', sans-serif;
@@ -337,7 +337,7 @@ input, textarea, select, button {
 	-webkit-border-radius:0px;
 }
 .disabled-btn {
-	background-color: #999999;
+	background-color: #b1b1b1;
 	border: 1px solid #999999;
 	cursor: not-allowed; 
 	color: #e2e2e2;
