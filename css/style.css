@@ -245,6 +245,11 @@ input, textarea, select, button {
 	border-top: none;
 	border-right: none;
 	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);  
+	-webkit-transform-style: preserve-3d;
+    -ms-transform: rotate(-45deg);      
+	-ms-transform-style: preserve-3d;
+    
 }
 .choice-input input[type=checkbox]:checked + label:after {
 	opacity: 1;
@@ -329,6 +334,7 @@ input, textarea, select, button {
 	font-size: 30px;
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-weight: bold;
+	-webkit-border-radius:0px;
 }
 .disabled-btn {
 	background-color: #999999;
@@ -338,6 +344,7 @@ input, textarea, select, button {
 	font-size: 30px;
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-weight: bold;
+	-webkit-border-radius:0px;
 }
 #submitBtn {
 	border-radius: 7px;
