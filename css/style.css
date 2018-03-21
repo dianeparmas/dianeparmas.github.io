@@ -1,11 +1,13 @@
 @charset "utf-8";
 
-@font-face {
+/*@font-face {
   font-family: 'Bienetresocial';
   src: url('../fonts/Bienetresocial.tff'); 
   font-family: 'BienetresocialBold';
   src: url('../fonts/BienetresocialBold.tff'); 
-}
+}*/
+@font-face {font-family:"Bienetresocial Bold"; src:url("Bienetresocial_Bold.eot?") format("eot"),url("Bienetresocial_Bold.woff") format("woff"),url("Bienetresocial_Bold.ttf") format("truetype"),url("Bienetresocial_Bold.svg#BienetresocialBold") format("svg");}
+@font-face {font-family:"Bienetresocial"; src:url("Bienetresocial.eot?") format("eot"),url("Bienetresocial.woff") format("woff"),url("Bienetresocial.ttf") format("truetype"),url("Bienetresocial.svg#Bienetresocial") format("svg");}
 /* ------------------- reset ----------------------- */ 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
 del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
@@ -26,9 +28,9 @@ body {
 /* ------------------- general styles ----------------------- */ 
 * {
 	position:relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 a {
 	text-decoration:none;
@@ -636,7 +638,7 @@ _:-ms-lang(x), .wrap .content {
 		top: -60px;
 	}
 	.choices {
-		height: 250px;
+		height: 230px;
 	}	
 	.text-side h2 {
 		font-size: 16px;
@@ -666,7 +668,7 @@ _:-ms-lang(x), .wrap .content {
 }
 @media all and (max-width:370px) {
 	.choices {
-		height: 270px;
+		height: 250px;
 	}
 	.choice-thumb {
 		width: 60px;
