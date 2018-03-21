@@ -173,6 +173,7 @@ input, textarea, select, button {
 	font-weight: bold;
 	color: #3f2916;
 	font-size: 30pt;
+	line-height: 1.3;
 }
 #valiTeema {
 	font-size: 18px;
@@ -413,6 +414,7 @@ input, textarea, select, button {
 	font-size: 30pt;
 	font-family: 'Bienetresocial Bold';
 	font-weight: bold;	
+	line-height: 1.3;
 }
 #modal .close {
 	cursor: pointer;
@@ -466,6 +468,9 @@ _:-ms-lang(x), .wrap .content {
     /* Safari 5+ ONLY */
     ::i-block-chrome, .footer {
 		position: relative;
+    }
+	 ::i-block-chrome, .modal-content {
+		margin: 0 auto;
     }
 } 
 @media all and (min-width:1801px) {
@@ -551,6 +556,10 @@ _:-ms-lang(x), .wrap .content {
 		width: -moz-calc(100% - 60px);
 		height: auto;
 	}
+	#text-bg {
+		top: -120px;
+		right: -80px;
+	}
 }
 
 @media all and (max-width:700px) {
@@ -582,6 +591,11 @@ _:-ms-lang(x), .wrap .content {
 		width: -webkit-calc(100% - 140px);
 		width: -moz-calc(100% - 140px);
 		padding-left: 10px;
+	}
+}
+@media all and (max-width:600px) {	
+	.modal-header h1 {
+		font-size: 22pt;
 	}
 }
 @media all and (max-width:520px) {
@@ -631,7 +645,8 @@ _:-ms-lang(x), .wrap .content {
 		margin-top: -100px;
 	}
 	#text-bg {
-		top: -60px;
+		top: -90px;
+		right: -150px;
 	}
 	.choices {
 		height: 230px;
@@ -651,7 +666,7 @@ _:-ms-lang(x), .wrap .content {
 		line-height: 90px;
 	}
 	#valiArtiklid {
-		font-size: 23pt;
+		font-size: 21pt;
 	}
 	#valiTeema {
 		font-size: 16px;
@@ -689,7 +704,7 @@ _:-ms-lang(x), .wrap .content {
 		top: -5px;
 	}
 	.modal-header h1 {
-		font-size: 20pt;
+		font-size: 18pt;
 	}
 	.choice-text {
 		width: calc(100% - 60px);
