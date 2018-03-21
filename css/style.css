@@ -1,7 +1,18 @@
 @charset "utf-8";
 
-@font-face {font-family:"Bienetresocial Bold"; src: url("../fonts/Bienetresocial_Bold.eot?") format("eot"), url("../fonts/Bienetresocial_Bold.woff") format("woff"), url("../fonts/Bienetresocial_Bold.ttf") format("truetype"), url("Bienetresocial_Bold.svg#BienetresocialBold") format("svg");}
-@font-face {font-family:"Bienetresocial"; src: url("../fonts/Bienetresocial.eot?") format("eot"), url("Bienetresocial.woff") format("woff"), url("../fonts/Bienetresocial.ttf") format("truetype"), url("../fonts/Bienetresocial.svg#Bienetresocial") format("svg");}
+@font-face {
+	font-family:"Bienetresocial Bold"; src: 
+url("../fonts/Bienetresocial_Bold.eot?#iefix") format("embedded-opentype"), 
+url("../fonts/Bienetresocial_Bold.woff") format("woff"), 
+url("../fonts/Bienetresocial_Bold.ttf") format("truetype"), url("Bienetresocial_Bold.svg#BienetresocialBold") format("svg");}
+@font-face {
+	font-family:"Bienetresocial"; src: 
+	url("../fonts/Bienetresocial.eot?#iefix") format("embedded-opentype"), 
+	url("Bienetresocial.woff") format("woff"), 
+	url("../fonts/Bienetresocial.ttf") format("truetype"), 
+	url("../fonts/Bienetresocial.svg#Bienetresocial") format("svg");}
+	
+	
 /* ------------------- reset ----------------------- */ 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
 del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
