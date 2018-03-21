@@ -324,6 +324,7 @@ input, textarea, select, button {
 }
 .valmis-btn {
 	background-color: #971d00;
+	border: 1px solid #971d00;
 	border-radius: 7px;
 	font-size: 30px;
 	font-family: 'PT Sans Narrow', sans-serif;
@@ -331,6 +332,7 @@ input, textarea, select, button {
 }
 .disabled-btn {
 	background-color: #999999;
+	border: 1px solid #999999;
 	cursor: not-allowed; 
 	color: #e2e2e2;
 	font-size: 30px;
