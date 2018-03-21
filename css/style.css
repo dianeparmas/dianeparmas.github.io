@@ -176,6 +176,9 @@ input, textarea, select, button {
 	color: #3f2916;
 	font-size: 30pt;
 }
+#valiTeema {
+	font-size: 18px;
+}
 .aaretejaht {
 	background-image: url('../img/aaretejaht.jpg');	
 }
@@ -336,10 +339,12 @@ input, textarea, select, button {
 	font-weight: bold;
 	-webkit-border-radius:0px;
 }
+.valmis-btn:active {
+	border-style: outset;
+}
 .disabled-btn {
 	background-color: #b1b1b1;
 	border: 1px solid #999999;
-	cursor: not-allowed; 
 	color: #e2e2e2;
 	font-size: 30px;
 	font-family: 'PT Sans Narrow', sans-serif;
@@ -460,17 +465,19 @@ _:-ms-lang(x), .wrap .content {
 		padding-bottom:0 !important;	  
 }
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
-    /* Safari and Chrome, if Chrome rule needed */
-    
-
     /* Safari 5+ ONLY */
     ::i-block-chrome, .footer {
 		position: relative;
     }
-}  
-@media all and (max-width:1800px) {
+} 
+@media all and (min-width:1801px) {
 	#header-inner {
 		margin-top: -50px;
+	}
+} 
+@media all and (max-width:1800px) {
+	#header-inner {
+		margin-top: -80px;
 	}	
 }
 @media all and (max-width:993px) {
@@ -484,7 +491,6 @@ _:-ms-lang(x), .wrap .content {
 	}
 	#header-inner {
 		left: 30px;
-		margin-top: -35px;
 	}
 	.img-side {
 		background-position: center bottom -80px;
@@ -507,7 +513,7 @@ _:-ms-lang(x), .wrap .content {
 		background-position: center left -340px;
 	}
 	#header-inner {
-		margin-top: 0;
+		margin-top: -30px;
 		width: 100%;
 		position: relative;
 		left: 0;
@@ -586,7 +592,7 @@ _:-ms-lang(x), .wrap .content {
 		background-position: top -40px left -400px
 	}
 	#header-inner {
-		margin-top: -20px;
+		margin-top: -60px;
 	}
 	#valiArtiklidLink {
 		font-size: 24pt;
@@ -607,8 +613,8 @@ _:-ms-lang(x), .wrap .content {
 		margin-top: -35px;
 	}
 	#header {
-		background-position: top left 40%;
-		background-size: 250%;
+		background-position: top left 36%;
+		background-size: 300%;
 	}
 	#header-inner {
 		margin-top: -135px;
@@ -650,7 +656,7 @@ _:-ms-lang(x), .wrap .content {
 		font-size: 23pt;
 	}
 	#valiTeema {
-		font-size: 18px;
+		font-size: 16px;
 	}
 }
 @media all and (max-width:400px) {
@@ -722,10 +728,6 @@ _:-ms-lang(x), .wrap .content {
 .clearfix:after {
     clear:both;
 }
-/*
-.clearfix {
-    *zoom:1;
-}*/
 .clear {
 	clear:both;
 	width:100%;
