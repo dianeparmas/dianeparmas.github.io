@@ -7,6 +7,7 @@ $(function(){
 	});
 });
 jQuery(document).ready(function() {			
+	$('input[type=checkbox]').attr('checked',false);
 	$("#valiArtiklidLink").click(function() {
 		$('html, body').animate({
 			scrollTop: $("#valiArtiklid").offset().top
